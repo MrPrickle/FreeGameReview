@@ -6,6 +6,8 @@ import chromedriver_autoinstaller
 # Automatically download and install chromedriver
 chromedriver_autoinstaller.install()
 
+gameLink = input("Paste the link of the game you would like to run game review on: ")
+
 def run_script():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # Run in headless mode
