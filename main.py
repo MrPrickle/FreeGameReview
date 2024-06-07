@@ -26,6 +26,7 @@ def run_script():
     # Click the login button
     login_button = driver.find_element(By.LINK_TEXT, 'Log In')
     login_button.click()
+    print("Clicked Login")
 
     # Allow time for the login page to load
     time.sleep(2)
@@ -33,14 +34,17 @@ def run_script():
     # Enter username
     username_input = driver.find_element(By.ID, 'username')
     username_input.send_keys(username)
+    print("Username Entered")
 
     # Enter password
     password_input = driver.find_element(By.ID, 'password')
     password_input.send_keys(password)
+    print("Password Entered")
 
     # Submit the login form
     login_submit = driver.find_element(By.XPATH, '//button[contains(text(), "Log In")]')
     login_submit.click()
+    print("Login Successful")
 
     # Allow time for login to complete
     time.sleep(5)
@@ -48,6 +52,8 @@ def run_script():
     # Click on the "Play" button to start a new game
     # play_button = driver.find_element(By.LINK_TEXT, 'Play')
     # play_button.click()
+
+    message_button = driver.find_element(By.LINK_TEXT, '')
 
     # Allow time to observe the result of the click
     time.sleep(5)
