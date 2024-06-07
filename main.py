@@ -8,6 +8,9 @@ chromedriver_autoinstaller.install()
 
 gameLink = input("Paste the link of the game you would like to run game review on: ")
 
+username = ""
+password = ""
+
 def run_script():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # Run in headless mode
@@ -29,11 +32,11 @@ def run_script():
 
     # Enter username
     username_input = driver.find_element(By.ID, 'username')
-    username_input.send_keys('your_username')
+    username_input.send_keys(username)
 
     # Enter password
     password_input = driver.find_element(By.ID, 'password')
-    password_input.send_keys('your_password')
+    password_input.send_keys(password)
 
     # Submit the login form
     login_submit = driver.find_element(By.XPATH, '//button[contains(text(), "Log In")]')
@@ -43,8 +46,8 @@ def run_script():
     time.sleep(5)
 
     # Click on the "Play" button to start a new game
-    play_button = driver.find_element(By.LINK_TEXT, 'Play')
-    play_button.click()
+    # play_button = driver.find_element(By.LINK_TEXT, 'Play')
+    # play_button.click()
 
     # Allow time to observe the result of the click
     time.sleep(5)
